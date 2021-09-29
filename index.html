@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tarea 2</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/estilo.css" rel="stylesheet">
+
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <section>
+      <div class="container-fluid">
+        <h1>Formulario</h1>
+        <form role="form" id="formulario" class="row g-3 needs-validation" data-toggle="validator">
+          <ul>
+            <div class="form-group">
+              <li>
+                <label for="nombrecompleto" class="control-label">Nombre Completo</label>
+                <input type="String" class="form-control" id="nombrecompleto" maxlength="30"
+                  placeholder="Nombre Completo" data-error="Campo Nombre Completo requerido" required>
+                <div class="invalid-feedback">
+                  Campo Nombre Completo requerido
+                </div>
+                <div class="valid-feedback">
+                  Nombre Completo correcto
+                </div>
+              </li>
+            </div>
+            <li>
+              <label for="rut" class="control-label">RUT</label>
+              <input type="String" name="rut" required="required" pattern="\d{8,9}-[\d|kk]{1}"
+                placeholder=" Ej: 11111111-1">
+              <div class="invalid-feedback">
+                Campo RUT invalido
+              </div>
+              <div class="valid-feedback">
+                Rut correcto
+              </div>
+            </li>
+            <li>
+              <label for="nombre">Correo Electrónico</label>
+              <input type="email" id="email" maxlength="50" placeholder="Correo Electrónico" required>
+              <div class="invalid-feedback">
+                Campo Correo Electrónico requerido
+              </div>
+              <div class="valid-feedback">
+                Correo Electrónico correcto
+              </div>
+            </li>
+            <li>
+              <label for="nombre"> Télefono Móvil</label>
+              <input type="number" id="number" name="number" pattern="[0-9]{9}" required placeholder="ej:123456789">
+              <div class="invalid-feedback">
+                Campo Télefono Móvil inválido, ingresar un número de télefono con 9 dígitos
+              </div>
+              <div class="valid-feedback">
+                Télefono Móvil correcto
+              </div>
+            </li>
+            <div id="checkbox">
+              <label for="checkbox">Seleccionar uno o más lenguajes de programación de interés</label>
+              <br/>
+              <input type="checkbox" id="checkbox1" value="1" />
+              <label for="checkbox1">Python</label>
+              <br />
+              <input type="checkbox" id="checkbox2" value="2" />
+              <label for="checkbox2">TypeScript</label>
+              <br />
+              <input type="checkbox" id="checkbox3" value="3" />
+              <label for="checkbox3">C++</label>
+              <br />
+              <input type="checkbox" id="checkbox4" value="4" />
+              <label for="checkbox4">C#</label>
+              <br />
+              <input type="checkbox" id="checkbox5" value="5" />
+              <label for="checkbox5">PHP</label>
+              <br />
+              <input type="checkbox" id="checkbox6" value="6" />
+              <label for="checkbox6">Ruby on Rails</label>
+              <br />
+              <input type="checkbox" id="checkbox7" value="7" />
+              <label for="checkbox7">Java</label>
+              <br />
+              <input type="checkbox" id="checkbox8" value="8" />
+              <label for="checkbox8">R</label>
+              <br />
+              <input type="checkbox" id="checkbox9" value="9" />
+              <label for="checkbox9">Groovy</label>
+              <br/>
+              <input type="checkbox" id="checkbox10" value="10" />
+              <label for="checkbox10">Go</label>
+              <br />
+              <input type="checkbox" id="checkbox11" value="11" />
+              <label for="checkbox11">Swift</label>
+              <br />
+              <input type="checkbox" id="checkbox12" value="12" />
+              <label for="checkbox12">Kotlin</label>
+            </div>
+            <div class="form-group">
+              <label>¿Cuál es su nivel de experiencia en programación?</label>
+              <div class="radio">
+                <li>
+                  <input type="radio" id="opcion1" name="¿Cuál es su nivel de experiencia en programación?" value="1"
+                    required>
+                  Alto
+                  <input type="radio" id="opcion2" name="¿Cuál es su nivel de experiencia en programación?" value="2"
+                    required>
+                  Medio
+                  <input type="radio" id="opcion3" name="¿Cuál es su nivel de experiencia en programación?" value="3"
+                    required>
+                  Bajo
+                </li>
+              </div>
+            </div>
+            <label>Nivel de conocimiento sobre los siguientes lenguajes de programación:</label>
+            <div id="conocimiento">
+              <li> Python
+                <input type="range" min="0" max="200" required>
+              </li>
+              <li> Java
+                <input type="range" min="0" max="200" required>
+              </li>
+              <li>C++
+                <input type="range" min="0" max="200" required>
+              </li>
+            </div>
+            <div id="checkbox2">
+              <label for="checkbox">Seleccione cual de los siguientes cursos les ha tomado mayor dificultad:</label>
+              <br/>
+              <input type="checkbox" id="checkbox1" value="1" />
+              <label for="checkbox1">Estructura de Datos</label>
+              <br />
+              <input type="checkbox" id="checkbox2" value="2" />
+              <label for="checkbox2">Inteligencia Artificial</label>
+              <br />
+              <input type="checkbox" id="checkbox3" value="3" />
+              <label for="checkbox3">Interacción Humano-Computador</label>
+              <br/>
+              <input type="checkbox" id="checkbox4" value="4" />
+              <label for="checkbox4">Sistemas Operativos</label>
+              <br/>
+              <input type="checkbox" id="checkbox5" value="5" >
+              <label for="checkbox5">Otro</label>
+              <textarea id="otro" maxlength="500" ></textarea>
+            </div>
+            <li> Queremos conocer su opinión acerca de la escuela
+              <textarea id="Queremos conocer su opinión acerca de la escuela" maxlength="500" required></textarea>
+              <div class="invalid-feedback">
+                Campo opinión requerido
+              </div>
+              <div class="valid-feedback">
+                opinión correcto
+              </div>
+            </li>
+            <li>
+              <input type="submit" onclick="validar_checkbox(); validar_checkbox2()" value="Enviar">
+              <!--<button class="btn btn-primary" type="submit" id="myInput">Cancelar</button>-->
+              <input type=button onclick="limpiarFormulario()" value="Cancelar">
+            </li>
+          </ul>
+        </form>
+      </div>
+    </section>
+    <script src="https://www.mipagina.com/librerias/jquery.min.js"></script>
+    <script src="https://www.mipagina.com/librerias/jquery.validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script data-main="js/inicio" src="js/require-jquery.js"></script>
+</body>
+
+</html>
